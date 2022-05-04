@@ -1,2 +1,2 @@
-# frontend_essencial_serratec_grupo4
-Repositório do trabalho da disciplina de Frontend Essencial do Serratec
+# Frontend essencial do Grupo 4 2022.1
+## Repositório do Trabalho Final da disciplina de Front-end Essencial da residência em TIC/Software da Serratec
