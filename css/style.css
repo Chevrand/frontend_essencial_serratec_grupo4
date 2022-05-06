@@ -1,0 +1,56 @@
+/* Gerais */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary-color: hsl(275, 96%, 22%);
+    --cardElements: #fff;
+    font-size: 62.5%; /* 1rem = 10px*/
+    --nav-height: 7.2rem;
+}
+
+/* Barra de Navegação */
+header, .navbar {
+    background-color: var(--primary-color);
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 75px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-links a {
+    color: #fff;
+}
+
+/*  */
+
+h1 {
+    font-size: 3rem;
+}
+
+.card {
+    font-size: 2.4rem;
+}
+
+.card-body{
+    font-size: 1.8rem;
+}
