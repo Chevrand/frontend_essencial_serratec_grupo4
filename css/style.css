@@ -10,7 +10,8 @@
 
     --primary-color: hsl(275, 96%, 22%);
     --cardElements: #fff;
-    font-size: 62.5%; /* 1rem = 10px*/
+    /* font-size: 62.5%; 1rem = 10px */
+
     --nav-height: 7.2rem;
 }
 
@@ -18,7 +19,7 @@
 
 
 /*  */
-h1 {
+/* h1 {
     font-size: 3rem;
 }
 
@@ -28,4 +29,13 @@ h1 {
 
 .card-body{
     font-size: 1.8rem;
+} */
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+#search {
+    color: #f5af26;
+    border-color: #f5af26;
 }
