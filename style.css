@@ -2,24 +2,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 :root {
-
     --primary-color: hsl(275, 96%, 22%);
-    --cardElements: #fff;
-    font-size: 62.5%; /* 1rem = 10px*/
+    --secondary-color: hsl(275, 62%, 59%);
+    --cardElements: #DFDFDF;
+    font-size: 62.5%;
+    /* 1rem = 10px*/
+
+
+
 
     --nav-height: 7.2rem;
+}
+
+.logo {
+    width: 20rem;
+    height: 10rem;
+}
+
+#navigation {
+    margin-bottom: 1rem;
 }
 
 h1 {
     font-size: 3rem;
 }
 
-
-
-.card-body{
+h5 {
     font-size: 1.8rem;
-    
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.container-fluid {
+    font-size: 1.8rem;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
+
+.col {
+    border-radius: 1rem;
+    margin-right: 1rem;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 1rem;
+
+}
+
+.card-img-top {
+
+    border-radius: 10rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    width: 25rem;
+    height: 3rem;
+
+
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+
+    width: 10rem;
+
+    border: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--cardElements);
 }
