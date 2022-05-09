@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
 
 }
 
@@ -13,32 +15,59 @@
     /* 1rem = 10px*/
 
 
-
-
-    --nav-height: 7.2rem;
+    --nav-height: 13.2rem;
 }
 
-#navigation {
+.background-cor-primaria {
     height: var(--nav-height);
     background-color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    
 }
 
-a {
+.nav-list ul {
+    font-size: 2.2rem;
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    margin-right: 1.5rem;
+    
+
+}
+
+.nav-list li:hover{
+    color: white;
+    background-color: var(--secondary-color);
+    border: 1px solid black;
+    border-radius: 1.5rem;
+
+    
+}
+
+a, li {
+    padding: 0 1rem 0 1rem;
+    color: white;
     text-decoration: none;
 }
 
 h1 {
-    color: white;
-    font-size: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    
 }
-
 h5 {
     font-size: 1.8rem;
+    font-weight: 700;
 }
 
 p {
     font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .container-fluid {
@@ -61,7 +90,7 @@ p {
     margin-right: 1rem;
     border: 2px solid var(--primary-color);
     margin-bottom: 1rem;
-
+    
 }
 
 .card-img-top {
@@ -78,13 +107,9 @@ p {
     width: 25rem;
     height: 3rem;
 
-
-
-
-
 }
 
-.btn-primary {
+.btn1 {
     background-color: var(--primary-color);
     color: white;
     font-size: 1.6rem;

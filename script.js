@@ -1,3 +1,9 @@
+window.onload = function() {
+    fetchApiData();
+}
+
+
+
 function fetchApiData() {
     fetch('https://randomuser.me/api/?results=5')
         .then(response => response.json())
@@ -23,7 +29,7 @@ function fetchApiData() {
                 link.href = 'clientes.html';
                 link.setAttribute('target', '_blank');
                 const botaoEnviar = document.createElement('button');
-                botaoEnviar.className = 'btn btn-primary';
+                botaoEnviar.className = 'btn btn1';
 
 
                 img.src = data.results[i].picture.large;
