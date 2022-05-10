@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+
+:root {
+    --primary-color: hsl(275, 96%, 22%);
+    --secondary-color: hsl(275, 62%, 59%);
+    --footer-color1:hsl(0, 0%, 95%);
+    --footer-color2:hsl(0, 0%, 76%)
+    ;
+    --cardElements: #DFDFDF;
+    font-size: 62.5%;
+    /* 1rem = 10px*/
+
+
+    --nav-height: 13.2rem;
+}
+
+.background-cor-primaria {
+    height: var(--nav-height);
+    background-color: var(--primary-color);
+    margin-bottom: 3rem;
+    
+}
+
+.nav-list ul {
+    font-size: 2.2rem;
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    margin-right: 1.5rem;
+    
+
+}
+
+.nav-list li:hover{
+    color: white;
+    background-color: var(--secondary-color);
+    border: 1px solid black;
+    border-radius: 1.5rem;
+
+    
+}
+
+a, li {
+    padding: 0 1rem 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    
+}
+h5 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.container-fluid {
+    font-size: 1.8rem;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
+
+.col {
+    border-radius: 1rem;
+    margin-right: 1rem;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 1rem;
+    
+}
+
+.card-img-top {
+
+    border-radius: 10rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    width: 25rem;
+    height: 3rem;
+
+}
+
+.btn1 {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+
+    width: 10rem;
+
+    border: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--cardElements);
+}
+
+.footer1 {
+    background-color: var(--footer-color1);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer2 {
+    background-color: var(--footer-color2);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.assinatura {
+    font-size: 1.3rem;
+}
+
+.icones-footer {
+    height: 35px;
+    width: 35px;
+}
