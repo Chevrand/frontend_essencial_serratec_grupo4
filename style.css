@@ -113,6 +113,9 @@ p {
     
 }
 
+#cardsGrupo4 div:nth-child(2) .devProfiles  {
+    width: 20rem;
+}
 
 
 
