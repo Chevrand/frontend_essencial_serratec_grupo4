@@ -8,7 +8,7 @@ function fetchApiData() {
         .then(data => {
             const divContainer = document.createElement('div');
             divContainer.className = 'row row-cols-12 row-cols-sm-12 row-cols-md-6 g-lg-6 container-fluid';
-            for (i = 0; i < 5; i++) {
+             for (i = 0; i < 5; i++) {
                 const divColunas = document.createElement('div');
                 divColunas.className = 'col';
                 const divHeightCard = document.createElement('div');
