@@ -1,15 +1,13 @@
-window.onload = function() {
+window.onload = function () {
     fetchApiData();
 }
-
-
 
 function fetchApiData() {
     fetch('https://randomuser.me/api/?results=5')
         .then(response => response.json())
         .then(data => {
             const divContainer = document.createElement('div');
-            divContainer.className = 'row row-cols-1 row-cols-md-6 g-6 container-fluid';
+            divContainer.className = 'row row-cols-12 row-cols-sm-12 row-cols-md-6 g-lg-6 container-fluid';
             for (i = 0; i < 5; i++) {
                 const divColunas = document.createElement('div');
                 divColunas.className = 'col';
@@ -30,7 +28,6 @@ function fetchApiData() {
                 link.setAttribute('target', '_blank');
                 const botaoEnviar = document.createElement('button');
                 botaoEnviar.className = 'btn btn1';
-
 
                 img.src = data.results[i].picture.large;
                 nameTitle.innerHTML = `Nome: ` + data.results[i].name.first + " " + data.results[i].name.last;
