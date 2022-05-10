@@ -9,6 +9,8 @@
     --primary-color: hsl(275, 96%, 22%);
     --secondary-color: hsl(275, 62%, 59%);
     --cardElements: #DFDFDF;
+    --footer-color1:hsl(0, 0%, 95%);
+    --footer-color2:hsl(0, 0%, 76%);
     font-size: 62.5%;
     /* 1rem = 10px*/
     --nav-height: 13.2rem;
@@ -134,4 +136,40 @@ p {
 
 .fa-brands:hover {
     color: var(--secondary-color);
+}
+
+#gitHubIcon{
+    background-color: white;
+}
+
+footer {
+    background-color: var(--primary-color);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+   
+}
+
+
+
+.assinatura {
+    font-size: 1.3rem;
+    font-size: 2rem;
+}
+
+.assinatura:hover {
+    color: white;
+    
+}
+
+
+
+.icones-footer {
+    height: 35px;
+    width: 35px;
 }

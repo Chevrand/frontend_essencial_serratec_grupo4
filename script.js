@@ -37,6 +37,7 @@ function fetchApiData() {
                 // phone.innerHTML = `Telefone: ` + data.results[i].phone;
                 // endereco.innerHTML = `Cidade: ` + data.results[i].location.city + ', Estado: ' + data.results[i].location.state + ', País: ' + data.results[i].location.country;
 
+                
                 divContainer.appendChild(divColunas);
                 divColunas.appendChild(divHeightCard);
                 divHeightCard.appendChild(img);
@@ -50,6 +51,7 @@ function fetchApiData() {
 
 
             }
-            document.body.appendChild(divContainer);
+            document.getElementById('cardsAqui').appendChild(divContainer);
+            
         })
 }
