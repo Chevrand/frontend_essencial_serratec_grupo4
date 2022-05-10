@@ -1,41 +1,31 @@
 /* Gerais */
 * {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
-
     --primary-color: hsl(275, 96%, 22%);
-    --cardElements: #fff;
-    /* font-size: 62.5%; 1rem = 10px */
-
-    --nav-height: 7.2rem;
+    --secondary-color: hsl(275, 62%, 59%);
 }
 
-/* Barra de Navegação */
-
-
-/*  */
-/* h1 {
-    font-size: 3rem;
+/* Tags */
+nav ul li {
+    padding: 50px 20px;
 }
 
-.card {
-    font-size: 2.4rem;
+nav ul li:hover {
+    background-color: var(--secondary-color);
+    font-weight: bold;
 }
-
-.card-body{
-    font-size: 1.8rem;
-} */
-
-.navbar {
+/* Classes */
+.background-cor-primaria {
     background-color: var(--primary-color);
 }
 
-#search {
-    color: #f5af26;
-    border-color: #f5af26;
+.background-cor-secundaria {
+    background-color: var(--secondary-color);
+}
+
+.background-cor-terciaria {
+    background-color: var(--tertiary-color);
 }
