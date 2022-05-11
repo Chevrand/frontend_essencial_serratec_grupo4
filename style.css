@@ -7,16 +7,15 @@
 
 :root {
     --primary-color: hsl(275, 96%, 22%);
-    --secondary-color: hsl(275, 62%, 59%);
+    --secondary-color: #f5af26;
+    --texto: hsl(273, 95%, 8%);
     --cardElements: #DFDFDF;
-    --footer-color1:hsl(0, 0%, 95%);
-    --footer-color2:hsl(0, 0%, 76%);
-    font-size: 62.5%;
-    /* 1rem = 10px*/
-    --nav-height: 13.2rem;
+    font-size: 50%;
+    --nav-height: 10rem;
 }
 
 body {
+    color: var(--texto);
     width: 100%;
     height: 100%;
 }
@@ -38,8 +37,8 @@ body {
 }
 
 .nav-list li:hover {
-    color: white;
     background-color: var(--secondary-color);
+    color: var(--primary-color);
     
     border-radius: 1.5rem;
 }
@@ -52,6 +51,7 @@ li {
 }
 
 h1 {
+    margin-top:15rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
     display: flex;
@@ -68,31 +68,39 @@ p {
     font-size: 1.6rem;
     font-style: italic;
     font-weight: 500;
+    text-align: center;
 }
 
 .container-fluid {
     font-size: 1.8rem;
     display: flex;
-    margin-top: 2rem;
+    margin-top: 5rem;
     justify-content: center;
 }
 
 .card {
+    padding: 1rem;
     justify-content: center;
     align-items: center;
-    border: none;
+    border-radius: 1rem;
+    border: 2px solid var(--secondary-color);
+}
+
+.card-title {
+    text-align: center;
 }
 
 .col {
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
     border-radius: 1rem;
     margin-right: 1rem;
-    border: 2px solid var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .card-img-top {
     border-radius: 10rem;
-    margin-top: 1rem;
 }
 
 .devProfiles {
@@ -110,10 +118,9 @@ p {
     color: white;
     font-size: 1.6rem;
     border-radius: 2rem;
-
+    
     width: 10rem;
-
-    border: none;
+    
     margin-left: 1rem;
     margin-bottom: 1rem;
     margin-top: auto;
@@ -121,9 +128,9 @@ p {
 
 .btn:hover {
     background-color: var(--secondary-color);
-    color: var(--cardElements);
+    color: var(--primary-color);
+    font-weight: bold;
 }
-
 
 .favIcons{
     display: inline;
@@ -144,7 +151,7 @@ p {
 
 footer {
     background-color: var(--primary-color);
-    height: 100px;
+    height: 70px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -155,8 +162,6 @@ footer {
    
 }
 
-
-
 .assinatura {
     font-size: 1.3rem;
     font-size: 2rem;
@@ -166,8 +171,6 @@ footer {
     color: white;
     
 }
-
-
 
 .icones-footer {
     height: 35px;
