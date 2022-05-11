@@ -91,8 +91,9 @@ p {
 }
 
 .card-img-top {
-    border-radius: 10rem;
+    border-radius: 20rem;
     margin-top: 1rem;
+    width: 80%;
 }
 
 .devProfiles {
