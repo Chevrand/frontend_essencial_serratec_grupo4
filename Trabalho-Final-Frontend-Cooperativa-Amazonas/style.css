@@ -8,9 +8,14 @@
 :root {
     --primary-color: hsl(275, 96%, 22%);
     --secondary-color: hsl(275, 62%, 59%);
+    --dark-theme: hsl(0, 0%, 11%);
+    --dark-theme-secondary: rgb(58, 57, 57);
+
+     
     --cardElements: #DFDFDF;
-    --footer-color1:hsl(0, 0%, 95%);
-    --footer-color2:hsl(0, 0%, 76%);
+   
+
+
     font-size: 62.5%;
     /* 1rem = 10px*/
     --nav-height: 13.2rem;
@@ -21,7 +26,7 @@ body {
     height: 100%;
 }
 
-.background-cor-primaria {
+.background-navbar {
     height: var(--nav-height);
     background-color: var(--primary-color);
     margin-bottom: 3rem;
@@ -35,13 +40,31 @@ body {
     display: flex;
     gap: 1rem;
     margin-right: 1.5rem;
+    margin-top: 3rem;
 }
 
 .nav-list li:hover {
     color: white;
-    background-color: var(--secondary-color);
+    content: " ";
     
+
     border-radius: 1.5rem;
+}
+
+.nav-list li::after {
+    content: "";
+    width: 0%;
+    height: 0.2rem;
+    background-color: white;
+    display: block;
+    transition: 0.3s;
+    
+    margin-top: 2rem;
+
+}
+
+.nav-list li:hover:after{
+    width: 100%;
 }
 
 a,
@@ -98,13 +121,13 @@ p {
 }
 
 .devProfiles {
-    width: 17rem;
-    height: 17rem;
-    
+    width: 15rem;
+    height: 15rem;
+
 }
 
-#cardsGrupo4 div:nth-child(2) .devProfiles  {
-    width: 20rem;
+#cardsGrupo4 div:nth-child(2) .devProfiles {
+    width: 17rem;
 }
 
 .btn {
@@ -126,8 +149,7 @@ p {
     color: var(--cardElements);
 }
 
-
-.favIcons{
+.favIcons {
     display: inline;
     margin-bottom: 1.5rem;
 }
@@ -140,7 +162,7 @@ p {
     color: var(--secondary-color);
 }
 
-#gitHubIcon{
+#gitHubIcon {
     background-color: white;
 }
 
@@ -154,24 +176,92 @@ footer {
     align-items: center;
     position: fixed;
     bottom: 0;
-   
+
 }
-
-
 
 .assinatura {
     font-size: 1.3rem;
     font-size: 2rem;
+    
 }
 
 .assinatura:hover {
     color: white;
-    
+
 }
-
-
 
 .icones-footer {
     height: 35px;
     width: 35px;
+}
+
+/*=========TEMA DARK DA PAGINA ============*/
+
+.tema button {
+    
+    font-size: 2rem;
+    
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 10rem;
+    border: none;
+    
+}
+
+.dark button {
+    background: var(--dark-theme);
+    border: 1px solid white;
+}
+
+
+
+.dark button:hover{
+    background: var(--dark-theme-secondary);
+    filter: brightness(1.5);
+}
+
+.dark {
+    background: var(--dark-theme-secondary);
+    color: white;
+
+}
+
+.dark .background-navbar{
+    background-color: var(--dark-theme);
+    color: #1c1c1c;
+}
+
+.dark h1{
+    box-shadow: 3rem 2rem 1rem var(--dark-theme);
+
+}
+
+.dark h5, p {
+    color: black;
+}
+.dark .navbar {
+    
+    color: var(--primary-color);
+    border: 1px solid white;
+}
+
+.dark .col {
+    border: 1px solid white;
+    padding: 0.4rem;
+}
+
+.dark footer {
+    background: var(--dark-theme);
+    color: #ffffff;
+    border: 1px solid #f7f7f7;
+}
+
+.dark .fa-brands{
+    color: var(--dark-theme);
+}
+
+.dark .fa-brands:hover{
+    color: var(--dark-theme-secondary);
+    filter: brightness(2);
 }
