@@ -319,6 +319,13 @@ td {
     color: var(--texto);
     font-size: 2rem;
 }
+.dark .table{
+    color: white;
+}
+
+.dark .linhaTabelaCliente:hover{
+    color: black;
+}
 
 .linhaTabelaCliente:hover{
     background-color: var(--tabela-color);
