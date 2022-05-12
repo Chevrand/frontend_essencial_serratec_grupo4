@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -318,6 +319,13 @@ td {
 .table {
     color: var(--texto);
     font-size: 2rem;
+}
+.dark .table{
+    color: white;
+}
+
+.dark .linhaTabelaCliente:hover{
+    color: black;
 }
 
 .linhaTabelaCliente:hover{
