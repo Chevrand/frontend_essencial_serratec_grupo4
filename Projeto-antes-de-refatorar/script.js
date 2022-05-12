@@ -6,52 +6,35 @@ function fetchApiData() {
     fetch('https://randomuser.me/api/?results=5')
         .then(response => response.json())
         .then(data => {
-            const divContainer = document.createElement('div');
-            divContainer.className = 'row row-cols-12 row-cols-sm-12 row-cols-md-6 g-lg-6 container-fluid';
-             for (i = 0; i < 5; i++) {
-                const divColunas = document.createElement('div');
-                divColunas.className = 'col';
-                const divHeightCard = document.createElement('div');
-                divHeightCard.className = 'card h-100 d-flex flex-column';
-                const img = document.createElement('img');
-                img.className = 'card-img-top';
-                const divCardBody = document.createElement('div');
-                divCardBody.className = 'card-body';
-                const nameTitle = document.createElement('h5');
-                nameTitle.className = 'card-title';
-                const timeZoneDescription = document.createElement('p');
-                 const phone = document.createElement('p');
-                const endereco = document.createElement('p');
-                const link = document.createElement('a');
-                link.className = 'link';
-                link.href = 'clientes.html';
-                link.setAttribute('target', '_blank');
-                const botaoEnviar = document.createElement('button');
-                
-                botaoEnviar.className = 'btn btn1';
-
-                img.src = data.results[i].picture.large;
-                nameTitle.innerHTML = `Nome: ` + data.results[i].name.first + " " + data.results[i].name.last;
-                timeZoneDescription.innerHTML = `Fuso: ` + data.results[i].location.timezone.description;
-                 phone.innerHTML = `Telefone: ` + data.results[i].phone;
-                 endereco.innerHTML = `Cidade: ` + data.results[i].location.city + ', Estado: ' + data.results[i].location.state + ', País: ' + data.results[i].location.country;
-                botaoEnviar.innerHTML = `Enviar `;
-
-                
-                divContainer.appendChild(divColunas);
-                divColunas.appendChild(divHeightCard);
-                divHeightCard.appendChild(img);
-                divHeightCard.appendChild(divCardBody);
-                divCardBody.appendChild(nameTitle);
-                divCardBody.appendChild(timeZoneDescription);
-                divCardBody.appendChild(phone);
-                divCardBody.appendChild(endereco);
-                divHeightCard.appendChild(link);
-                link.appendChild(botaoEnviar);
-
-
-            }
-            document.getElementById('cardsAqui').appendChild(divContainer);
-            
-        })
+            data.results.forEach((pessoa) => {
+                const divContainer = document.createElement('div');
+                divContainer.className = 'col';
+                divContainer.innerHTML =
+                    `
+            <div class="card h-100 d-flex flex-column">
+                <img src="${pessoa.picture.large}"
+                class="card-img-top"
+                alt= "imagem de pessoa capturada pela API"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">${pessoa.name.first + ' ' + pessoa.name.last} </h5>
+                    <p> Fuso: ${pessoa.location.timezone.description}</p>
+                    <p> Contato: ${pessoa.phone}</p> 
+                    <p> Cidade: ${pessoa.location.city} </p>
+                    <p> Estado: ${pessoa.location.state} </p>
+                    <p> País: ${pessoa.location.country} </p>
+                </div>
+                <a class="link" href="clientes.html" target="_blank">
+                <button class="btn btn1">Enviar</button> </a>
+            </div>
+        
+        `;
+                document.getElementById('cardsAqui').appendChild(divContainer);
+            });
+        });
 }
+
+function mudaTema() {
+    document.body.classList.toggle("dark");
+    
+  }
