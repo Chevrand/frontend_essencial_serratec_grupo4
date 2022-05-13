@@ -125,6 +125,12 @@ footer {
     border: 2px solid var(--primary-color);
     margin-bottom: 1rem;
 }
+.col-cliente {
+    border-radius: 1rem;
+    margin-right: 1rem;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
 
 .card-img-top {
     border-radius: 20rem;
@@ -290,7 +296,7 @@ th {
     width: 100%;
 }
 
-.col:hover {
+.col-cliente:hover {
     border-color: var(--secondary-color);
     cursor: pointer;
 }

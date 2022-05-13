@@ -12,7 +12,7 @@ function fetchApiData() {
             listaClientes = data;
             data.forEach((pessoa) => {
                 const divContainer = document.createElement('div');
-                divContainer.className = 'col';
+                divContainer.className = 'col-cliente';
                 divContainer.setAttribute("id", pessoa.login.uuid);
                 divContainer.setAttribute("onclick", "mostrarFichaCliente(this)");
                 divContainer.setAttribute("data-bs-toggle","modal");
