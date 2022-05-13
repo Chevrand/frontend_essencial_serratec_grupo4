@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --hue: 275;
+    --primary-color: hsl(var(--hue), 96%, 22%);
+    --secondary-color: hsl(var(--hue), 62%, 59%);
+    --dark-theme: hsl(0, 0%, 11%);
+    --dark-theme-secondary: rgb(58, 57, 57);
+
+    --tabela-color: #f5af26;
+    --texto: hsl(273, 95%, 8%);
+
+     
+    --cardElements: hsl(0, 0%, 87%);
+   
+
+
+    font-size: 62.5%;
+    /* 1rem = 10px*/
+    --nav-height: 13.2rem;
+}
+
+body {
+    color: var(--texto);
+}
+
+.background-navbar {
+    height: var(--nav-height);
+    background-color: var(--primary-color);
+    margin-bottom: 1rem;
+
+}
+
+.nav-list ul {
+    font-size: 2.2rem;
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    margin-right: 1.5rem;
+    margin-top: 3rem;
+}
+
+.nav-list li:hover {
+    color: white;
+    content: " ";
+    
+
+    border-radius: 1.5rem;
+}
+
+.nav-list li::after {
+    content: "";
+    width: 0%;
+    height: 0.2rem;
+    background-color: white;
+    display: block;
+    transition: 0.3s;
+    
+    margin-top: 2rem;
+
+}
+
+.nav-list li:hover:after{
+    width: 100%;
+}
+
+a,
+li {
+    padding: 0 1rem 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 5rem 0 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align:center;
+}
+
+p {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+    text-align:center;
+}
+
+.container-fluid {
+    font-size: 1.8rem;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.col:hover {
+    border-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.col {
+    border-radius: 1rem;
+    margin-right: 1rem;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    border-radius: 20rem;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+.devProfiles {
+    position: relative;
+    max-width: 100%;
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 1rem;
+}
+
+.turmaArrepio img.image-hover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 15rem;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+    width: 18rem;
+    
+}
+
+.dark .turmaArrepio:hover img.image-hover {
+    opacity: 1;
+}
+
+#cardsGrupo4 div:nth-child(2) .devProfiles {
+    width: 17rem;
+}
+
+#cardsAqui {
+    margin-top: 5rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+
+    width: 10rem;
+
+    border: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--cardElements);
+}
+
+.favIcons {
+    display: inline;
+    margin-bottom: 1.5rem;
+}
+
+.fa-brands {
+    color: var(--primary-color);
+}
+
+.fa-brands:hover {
+    color: var(--secondary-color);
+}
+
+#gitHubIcon {
+    background-color: white;
+}
+
+footer {
+    background-color: var(--primary-color);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    
+}
+
+.assinatura {
+    font-size: 1.3rem;
+    font-size: 2rem;
+    
+}
+
+.assinatura:hover {
+    color: white;
+    
+}
+
+.icones-footer {
+    height: 35px;
+    width: 35px;
+}
+
+/*=========TEMA DARK DA PAGINA ============*/
+
+.tema button {
+    
+    font-size: 2rem;
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 10rem;
+    border: none;
+    float: right;
+    
+}
+
+.tema button:hover {
+    background: var(--secondary-color);
+}
+
+.dark button {
+    background: var(--dark-theme);
+    border: 1px solid white;
+}
+
+.dark button:hover{
+    background: var(--dark-theme-secondary);
+    filter: brightness(1.5);
+}
+
+.dark {
+    background: var(--dark-theme-secondary);
+    color: white;
+
+}
+
+.dark .background-navbar{
+    background-color: var(--dark-theme);
+    color: #1c1c1c;
+}
+
+.dark h1{
+    padding-bottom: 1rem;
+    box-shadow: 3rem 2rem 1rem var(--dark-theme);
+
+}
+
+.dark h5, p {
+    color: black;
+}
+.dark .navbar {
+    
+    color: var(--primary-color);
+    border: 1px solid white;
+}
+
+.dark .col {
+    border: 1px solid white;
+    padding: 0.4rem;
+}
+
+.dark footer {
+    background: var(--dark-theme);
+    color: #ffffff;
+    border: 1px solid #f7f7f7;
+}
+
+.dark .fa-brands{
+    color: var(--dark-theme);
+}
+
+.dark .fa-brands:hover{
+    color: var(--dark-theme-secondary);
+    filter: brightness(2);
+}
+
+
+/*============== PAGINA CLIENTES =========================*/
+
+.tabela-clientes {
+    padding: 5rem;
+    justify-content: center;
+}
+
+th {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.table {
+    color: var(--texto);
+    font-size: 2rem;
+}
+.dark .table{
+    color: white;
+}
+
+.dark .linha-tabela-cliente:hover{
+    color: black;
+}
+
+.linha-tabela-cliente:hover{
+    cursor: pointer;
+    background-color: var(--tabela-color);
+}
+
+
+#datatable-search-input {
+    font-size: 2rem;
+    margin-top: 1rem;
+    outline-offset: none !important;
+    outline: none !important;
+    width: 100%;
+    border: 1px thin hsla(0, 43%, 99%, 0);
+    padding: 0.5rem;
+}
+#datatable-search-input:focus {
+    font-size: 2rem;
+    margin-top: 1rem;
+    outline-offset: none !important;
+    outline: none !important;
+    outline-style: none !important;
+    outline-color: #1c1c1c;
+}
+
+.modal-content {
+    width: 35rem;
+}
+
+.header-modal {
+    padding: 1rem;
+    height: 20rem;
+    background-color: var(--primary-color);
+    align-items:flex-start;
+    display: flex;
+}
+
+.btn-close {
+    justify-self:right;
+    background-color: var(--tabela-color);
+}
+
+.container-img-modal {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-modal {
+    width: 18rem;
+    border: 3px solid var(--tabela-color);
+    border-radius: 100%;
+}
+
+.descricao-cliente {
+    font-style: normal !important;
+}
+
+h6 {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+#container-info-modal {
+    padding: 2rem;
+}
+
+.padding-esquerda-tabela {
+    padding-left: 5rem !important;
+}
