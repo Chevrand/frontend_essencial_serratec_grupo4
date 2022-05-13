@@ -9,8 +9,16 @@ barraPesquisa.onkeyup = function () {
     let textoPesquisado = barraPesquisa.value;
     let listaFiltrada = buscar(listaClientes, textoPesquisado);
     criarTabela(listaFiltrada);
-    
 } 
+
+barraPesquisa.onsearch = function () {
+    if(barraPesquisa.onkeyup) {
+        let listaFiltrada = buscar(listaClientes, barraPesquisa.value);
+        criarTabela(listaFiltrada);
+    } else {
+        criarTabela(listaClientes);
+    }
+}
 
 function carregarPagina() {
     fetch('https://randomuser.me/api/?results=50')
