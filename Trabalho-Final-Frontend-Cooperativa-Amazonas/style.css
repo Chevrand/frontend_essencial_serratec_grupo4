@@ -1,3 +1,5 @@
+/*========== ESTILIZAÇÃO PRINCIPAL ============*/
+
 * {
     margin: 0;
     padding: 0;
@@ -15,28 +17,70 @@
 
     --tabela-color: #f5af26;
     --texto: hsl(273, 95%, 8%);
-
-     
+       
     --cardElements: hsl(0, 0%, 87%);
-   
-
-
-    font-size: 62.5%;
+       
+    font-size: 55%;
     /* 1rem = 10px*/
-    --nav-height: 13.2rem;
 }
 
 body {
     color: var(--texto);
+}
+
+a,
+li {
+    padding: 0 1rem 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 5rem 0 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align:center;
+}
+
+p {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+    text-align:center;
+}
+
+h6 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--primary-color);
+    height: 80px;
     width: 100%;
-    height: 100%;
+    bottom: 0;
+    
 }
 
 .background-navbar {
-    height: var(--nav-height);
     background-color: var(--primary-color);
     margin-bottom: 1rem;
-
+    width: fit-content;
+    min-width: 100%;
 }
 
 .nav-list ul {
@@ -49,13 +93,6 @@ body {
     margin-top: 3rem;
 }
 
-.nav-list li:hover {
-    color: white;
-    content: " ";
-    
-
-    border-radius: 1.5rem;
-}
 
 .nav-list li::after {
     content: "";
@@ -66,38 +103,7 @@ body {
     transition: 0.3s;
     
     margin-top: 2rem;
-
-}
-
-.nav-list li:hover:after{
-    width: 100%;
-}
-
-a,
-li {
-    padding: 0 1rem 0 1rem;
-    color: white;
-    text-decoration: none;
-}
-
-h1 {
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 2.6rem;
-}
-
-h5 {
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-p {
-    font-size: 1.6rem;
-    font-style: italic;
-    font-weight: 500;
+    
 }
 
 .container-fluid {
@@ -134,25 +140,53 @@ p {
     margin-bottom: 1rem;
 }
 
-.turmaArrepio img.image-hover{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 15rem;
-    bottom: 0;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity .2s;
+.modal-content {
+    border-radius: 1rem;
+    width: 35rem;
+}
+
+.header-modal {
+    padding: 1rem;
+    height: 20rem;
+    background-color: var(--primary-color);
+    align-items:flex-start;
+    display: flex;
+}
+
+.container-img-modal {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-modal {
     width: 18rem;
-    
+    border: 3px solid var(--tabela-color);
+    border-radius: 100%;
 }
 
-.dark .turmaArrepio:hover img.image-hover {
-    opacity: 1;
+.modal-body {
+    padding-bottom: 3rem;
 }
 
-#cardsGrupo4 div:nth-child(2) .devProfiles {
-    width: 17rem;
+.descricao-cliente {
+    font-style: normal !important;
+}
+
+.container-info-modal {
+    padding-left: 1rem;
+    margin: 4rem 0 4rem 0;
+}
+
+.button-close {
+    justify-self:right;
+    text-justify: center;
+    padding: 1%;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--tabela-color);
 }
 
 .btn {
@@ -160,18 +194,13 @@ p {
     color: white;
     font-size: 1.6rem;
     border-radius: 2rem;
-
+    
     width: 10rem;
-
+    
     border: none;
     margin-left: 1rem;
     margin-bottom: 1rem;
     margin-top: auto;
-}
-
-.btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--cardElements);
 }
 
 .favIcons {
@@ -183,36 +212,10 @@ p {
     color: var(--primary-color);
 }
 
-.fa-brands:hover {
-    color: var(--secondary-color);
-}
-
-#gitHubIcon {
-    background-color: white;
-}
-
-footer {
-    background-color: var(--primary-color);
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-
-}
-
 .assinatura {
     font-size: 1.3rem;
     font-size: 2rem;
     
-}
-
-.assinatura:hover {
-    color: white;
-
 }
 
 .icones-footer {
@@ -220,7 +223,114 @@ footer {
     width: 35px;
 }
 
+#gitHubIcon {
+    background-color: white;
+}
+
+#cardsGrupo4 div:nth-child(2) .devProfiles {
+    width: 17rem;
+}
+
+#cardsAqui {
+    margin-top: 5rem;
+}
+
+/*============== PAGINA CLIENTES ===============*/
+
+th {
+    text-align: center;
+}
+
+.tabela-clientes {
+    padding: 5rem;
+    justify-content: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.table {
+    color: var(--texto);
+    font-size: 2rem;
+}
+
+.padding-esquerda-tabela {
+    padding-left: 5rem !important;
+}
+
+#datatable-search-input {
+    font-size: 2rem;
+    margin-top: 1rem;
+    outline-offset: none !important;
+    outline: none !important;
+    width: 100%;
+    border: 1px thin hsla(0, 43%, 99%, 0);
+    padding: 0.5rem;
+}
+
+#datatable-search-input:focus {
+    font-size: 2rem;
+    margin-top: 1rem;
+    outline-offset: none !important;
+    outline: none !important;
+    outline-style: none !important;
+    outline-color: #1c1c1c;
+}
+
+/*================= HOVER =================*/
+
+.nav-list li:hover {
+    color: white;
+    content: " ";
+    border-radius: 1.5rem;
+}
+
+.nav-list li:hover:after{
+    width: 100%;
+}
+
+.col:hover {
+    border-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.turmaArrepio img.image-hover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 15rem;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+    width: 15rem;   
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--cardElements);
+}
+
+.fa-brands:hover {
+    color: var(--secondary-color);
+}
+
+.linha-tabela-cliente:hover{
+    cursor: pointer;
+    background-color: var(--tabela-color);
+}
+
+.assinatura:hover {
+    color: white;
+    
+}
+
 /*=========TEMA DARK DA PAGINA ============*/
+
+.dark .turmaArrepio:hover img.image-hover {
+    opacity: 1;
+}
 
 .tema button {
     
@@ -295,62 +405,30 @@ footer {
     filter: brightness(2);
 }
 
-
-/*============== PAGINA CLIENTES =========================*/
-
-
-.tabela-clientes {
-    padding: 5rem;
-    justify-content: center;
-}
-
-th {
-    text-align: center;
-}
-
-td {
-    padding: 1rem;
-}
-
-.center {
-    text-align: center;
-}
-
-.table {
-    color: var(--texto);
-    font-size: 2rem;
-}
 .dark .table{
     color: white;
 }
 
-.dark .linhaTabelaCliente:hover{
+.dark .linha-tabela-cliente:hover{
     color: black;
 }
 
-.linhaTabelaCliente:hover{
-    background-color: var(--tabela-color);
+.dark .nome-modal {
+    color: white;
 }
 
-#cardsAqui {
-    margin-top: 5rem;
+.dark .fuso-modal {
+    color: white;
 }
 
-#datatable-search-input {
-    font-size: 2rem;
-    margin-top: 1rem;
-    outline-offset: none !important;
-    outline: none !important;
-    width: 100%;
-    border: 1px thin hsla(0, 43%, 99%, 0);
-    padding: 0.5rem;
-}
-#datatable-search-input:focus {
-    font-size: 2rem;
-    margin-top: 1rem;
-    outline-offset: none !important;
-    outline: none !important;
-    outline-style: none !important;
-    outline-color: #1c1c1c;
+.dark .header-modal {
+    background-color: var(--dark-theme);
 }
 
+.dark .modal-body {
+    background-color: var(--dark-theme-secondary);
+}
+
+.dark .button-close {
+    border: none;
+}
