@@ -107,16 +107,15 @@ function mostrarFichaCliente(clienteElement){
     const paisModal = document.getElementsByClassName('pais-modal')[0];
 
     imgModal.src = cliente.picture.large;
-    nomeModal.innerHTML = `${cliente.name.title} ${cliente.name.first} 
-                                ${cliente.name.last}, ${cliente.dob.age} anos`;
     fusoModal.innerHTML = `${cliente.location.state}, ${cliente.location.country}`;
     dataCadastroModal.innerHTML = `Data de cadastro: ${ajustarData(cliente.registered.date)}`;
     emailModal.innerHTML = `Email: ${cliente.email}`;
     celularModal.innerHTML = `Celular: ${cliente.cell}`;
-    enderecoModal.innerHTML = `Endereço: ${cliente.location.street.name}, nº ${cliente.location.street.number}`
-    paisModal.innerHTML = `${cliente.location.city} - ${cliente.location.state}, ${cliente.location.country}`
+    nomeModal.innerHTML = `${cliente.name.title} ${cliente.name.first} 
+                                ${cliente.name.last}, ${cliente.dob.age} anos`;
+    enderecoModal.innerHTML = `Endereço: ${cliente.location.street.name}, 
+                                nº ${cliente.location.street.number} - ${cliente.location.city}`
 
-    console.log(nomeModal);
 }
 
 function recuperarCliente(id) {
