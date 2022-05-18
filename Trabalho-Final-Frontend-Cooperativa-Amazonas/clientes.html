@@ -34,7 +34,7 @@
       <nav class="navbar background-navbar">
         <div class="logo">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/logo-amazonas.png" alt="logo do site" width="200" height="125">
+            <img src="assets/logo-amazonas.png" alt="logo do site" width="120" height="80">
           </a>
         </div>
         <div class="nav-list">
@@ -59,6 +59,28 @@
     </header>
 
     <main>
+      <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="header-modal">
+              <div class="container-img-modal">
+                <img alt="imagem do cliente" class="imagem-modal"></img>
+              </div>
+              <button type="button" class="button-close" data-bs-dismiss="modal" aria-label="Close"><h4>X</h4></button>
+            </div>
+            <div class="modal-body">
+              <h5 class="nome-modal">Nome do cliente, 00 anos</h5>
+              <p class="fuso-modal">Fuso do cliente</p>
+              <div class="container-info-modal">
+                <h6 class="data-cadastro-modal">Data de cadastro: 00/00/00 </h6>
+                <h6 class="email-modal">Email: cliente@email.com</h6> 
+                <h6 class="celular-modal">Celular: 99999-9999</h6>
+                <h6 class="endereco-modal">Endereço: Rua dos bobos, nº 0 - Cidade</h6> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="tabela-clientes">
         <div class="form-outline mb-4">
@@ -95,13 +117,8 @@
 
     </footer>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
-  <script src="script.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="script-clientes.js"></script>
 
 </html>
